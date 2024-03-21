@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+ font-family: Arial, sans-serif;
+ background-color: #f2f2f2;
+ display: flex;
+ background: url(bck.png);
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+}
+form {
+ width: 300px;
+ padding: 20px;
+ background: #fff;
+ border-radius: 5px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+ display: block;
+ margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+ width: calc(100% - 20px);
+ padding: 10px;
+ margin-bottom: 15px;
+ border: 1px solid #ccc;
+ border-radius: 3px;
+}
+
+button[type="submit"] {
+ width: calc(100% - 20px);
+ padding: 10px;
+ background-color: #4caf50;
+ color: #fff;
+ border: none;
+ border-radius: 3px;
+ cursor: pointer;
+}
+
+button[type="submit"]:hover {
+ background-color: #45a049;
+}
+
+a {
+ display: block;
+ text-align: center;
+ color: #666;
+ text-decoration: none;
+}
+
+a:hover {
+ color: #333;
+}
+     </style>
+ </head>
+ <form  method="post">
+     <body>
+  <label for="username">Username</label>
+  <input id="username" type="text" name="username" value="" placeholder="Enter the username"><br>
+  <label for="password">Password</label>
+  <input id ="password" type="password" type="password" value="" placeholder="Enter the Password"><br>
+  <button id="login" type="submit">Login</button><br>
+  <a href="register.html" >RegisterNow</a>
+     </body>
+ </form>
+<script>
+    let a=document.getElementById("username").value;
+    let b=document.getElementById("password").value;
+  
+    if(a=='admin' && b =='admin'){
+
+     window.location.href='page2.html';
+    }
+    else{
+        document.getElementById('message').innerText='invalid credentials';
+    }
+</script>
+</body>
+</html>
